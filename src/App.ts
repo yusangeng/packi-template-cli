@@ -6,7 +6,7 @@ import compareVersion from "~/utils/version/compareVersion";
 
 const actionPath = path.resolve(__dirname, "./actions");
 
-const PACKAGE_INFO_URL = "http://registry.npm.taobao.org/packi";
+const PACKAGE_INFO_URL = "http://registry.npm.taobao.org/<%= projectName %>";
 
 export default class App {
   appArgs: string[];
