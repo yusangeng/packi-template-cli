@@ -1,4 +1,4 @@
 import "./moduleAlias";
-import App from "./App";
+import { App } from "./App";
 
-export default App;
+export { App };

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var App = require("../lib").default;
+import { App } from "../esm";
 
 try {
   var app = new App(process.argv, process.cwd());

@@ -1,6 +1,6 @@
 import path from "path";
 import download from "download";
-import { printPackageInfo, setPrintLevel, PRINT_LEVEL, error, warn, success } from "packi-print";
+import { printPackageInfo, setPrintLevel, PRINT_LEVEL, error, warn, success } from "@packi_/print";
 import getPackageJSON from "~/utils/package/packageJSON";
 import compareVersion from "~/utils/version/compareVersion";
 
@@ -8,7 +8,7 @@ const actionPath = path.resolve(__dirname, "./actions");
 
 const PACKAGE_INFO_URL = "http://registry.npm.taobao.org/<%= projectName %>";
 
-export default class App {
+export class App {
   appArgs: string[];
   cwd: string;
   command: string;
@@ -32,7 +32,7 @@ export default class App {
       await this.printAppInfo();
       await this.checkVersion();
     } catch (err) {
-      error(err.message);
+      error((err as any).message);
       error(`Try to continue...`);
     }
 
@@ -56,7 +56,7 @@ export default class App {
         return 1;
       }
 
-      error(err.message);
+      error((err as any).message);
       return 1;
     }
 

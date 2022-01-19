@@ -1,4 +1,4 @@
-import Context from "packi-settings";
+import Context from "@packi_/settings";
 
 type S = {};
 
